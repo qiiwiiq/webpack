@@ -13,10 +13,19 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './app'),
-    filename: '[name].js',
+    filename: './js/[name].js',
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]'
+          }
+        }]
+      },
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
