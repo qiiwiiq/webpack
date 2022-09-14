@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "NODE_ENV=development webpack --watch",
     "start": "NODE_ENV=development webpack",
-    "deploy": "NODE_ENV=production webpack"
+    "deploy": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=production webpack-dev-server --open"
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +22,8 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.0"
   },
   "browserslist": {
     "production": [

@@ -15,6 +15,10 @@ module.exports = {
     path: path.resolve(__dirname, './app'),
     filename: './js/[name].js',
   },
+  devServer: {
+    compress: true,
+    port: 3001,
+  },
   module: {
     rules: [
       {
@@ -33,7 +37,7 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader'
