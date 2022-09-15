@@ -12,7 +12,7 @@ module.exports = {
     about: './js/about.js',
   },
   output: {
-    path: path.resolve(__dirname, './app'),
+    path: path.resolve(__dirname, './dist'),
     filename: './js/[name].js',
   },
   devServer: {
@@ -46,6 +46,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin({  filename: './css/[name].css', })
   ]
 };
