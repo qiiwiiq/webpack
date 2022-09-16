@@ -43,6 +43,10 @@ module.exports = {
           'sass-loader'
         ]
       },
+      {
+        test: /\.js$/,
+        use: 'babel-loader'
+      }
     ]
   },
   plugins: [
